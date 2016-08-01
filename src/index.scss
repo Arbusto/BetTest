@@ -6,8 +6,8 @@ $dark-blue: #1a5e8b;
 $white: #ffffff;
 
 * {
-    box-sizing:border-box;
-    font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+    box-sizing: border-box;
+    font-family: "Myriad Pro","Gill Sans","Gill Sans MT","Calibri","sans-serif";
 }
 
 body {
@@ -100,7 +100,6 @@ body {
 
                 &:not(:last-child){
                     border-right: 1px solid #86c8f5;
-
                 }
             }
         }
@@ -112,8 +111,10 @@ body {
 
         .star-text {
             position: absolute;
-            top: 8px;
-            left: 30px;
+            top: 9px;
+            left: 32px;
+            font-size: 12px;
+            color: #3395d7;
         }
     }
 
@@ -146,30 +147,266 @@ body {
     }
 }
 
-
 .main-wrapper {
+    overflow: hidden;
     .background{
-        background: url(../img/main-background.png) bottom center;
-        background-position: 0px -131px;
-        background-repeat: no-repeat;
-        opacity: .6;
-        width: 113%;
-        height: 432px;
-        background-size: 90%;
+        position: relative;;
+
+        &:after {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 113%;
+            height: 432px;
+            opacity: 0.6;
+            background-image: url('../img/main-background.png');
+            background-repeat: no-repeat;
+            background-position: 0px -131px;
+            background-size: 90%;
+        }
 
         .main-img-wrapper {
-            width: 54.3%;
-            height: 105%;
+            width: 60.3%;
+            height: 453px;
             background-color: #fff;
             box-shadow: -.7px 7.5px 12px 0 rgba(2,3,3,.39);
             position: relative;
-            left: 18%;
+            left: 20%;
             overflow: hidden;
+            z-index: 1;
 
             .main-img {
                 content: url('../img/main-img.png');
-                width: 115%;
+                width: 985px;
             }
+
+        }
+
+        .main-news {
+            width: 26%;
+            height: 46%;
+            z-index: 2;
+            position: absolute;
+            top: 42%;
+            left: 19%;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            background: rgba(0,0,0,0.4);
+
+            .main-match {
+                font-size: 28px;
+                color: $white;
+                margin-left: 25px;
+            }
+
+            .main-status{
+                font-size: 28px;
+                color: $white;
+                margin-left: 25px;
+                font-weight: 100;
+                height: 17px;
+            }
+
+            .main-result {
+                font-size: 64px;
+                color: $white;
+                margin-right: 70px;
+                font-weight: 100;
+                align-self: flex-end;
+            }
+
+            .main-bet-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-bet {
+                font-size: 25px;
+                color: $white;
+                margin-left: 25px;
+                height: 17px;
+                margin-bottom: 12px;
+                letter-spacing: 2px;
+
+                .bet {
+                    margin-left: 10px;
+                    font-weight: 100;
+                }
+            }
+
+            .main-bet-now {
+                position: absolute;
+                top: 78%;
+                left: 75%;
+                background: #3395d7;
+                width: 77px;
+                padding: 8px;
+                height: 32px;
+                font-size: 13px;
+                display: block;
+                color: #fff;
+            }
+        }
+    }
+
+    .gallery-controls {
+        display: flex;
+        justify-content: center;
+        padding: 31px;
+        height: 120px;
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            background: #287eb6;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            margin: 10px;
+        }
+
+        .circle.selected {
+            background: #102e41;
+        }
+    }
+}
+
+.verticals-wrapper {
+    height: 485px;
+    background: #5ab3e1;
+    display: flex;
+    justify-content: center;
+
+    .vertical-col {
+        width: 275px;
+        position: relative;;
+        top: -33px;
+
+        &:not(:last-child){
+            margin-right: 25px;
+
+        }
+
+        &:not(:last-child):before {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 33px 23px 0 0;
+            border-color: transparent #cecece transparent transparent;
+            content: " ";
+            position: absolute;
+            top: 0px;
+            left: -23px;
+        }
+
+        &:not(:first-child):after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 23px 33px 0;
+            border-color: transparent transparent #cecece transparent;
+            content: " ";
+            position: absolute;
+            top: 0px;
+            right: -23px;
+        }
+
+        .vertical-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 78px;
+            font-size: 26px;
+            color: #fff;
+            background: #2d5d75;
+        }
+
+        .vertical-body {
+            height: 370px;
+            background: #fff;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            align-content: center;
+
+            .bonus {
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+
+                span {
+                    font-size: 62px;
+                    padding: 2px;
+                    text-align: center;
+                    color: #f5d453;
+                    font-weight: 600;
+                }
+
+                .reward {
+                    letter-spacing: 6px;
+                }
+            }
+
+            .bet-now {
+                font-size: 18px;
+                color: #2e91e5;
+            }
+
+            .bet-now-btn {
+                display: block;
+                height: 65px;
+                width: 205px;
+                background: #24a95c;
+                margin-top: 55px;
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    margin: 25px auto;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.steps-wrapper {
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .step {
+        width: 75px;
+        background: #f5d453;
+        height: 82px;
+        font-size: 70px;
+        font-family: sans-serif;
+        text-align: center;
+        color: #fff;
+    }
+
+    .step-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+
+        .title {
+            font-size: 21px;
+            font-weight: 100;
+        }
+
+        .description {
+            font-size: 14px;
         }
     }
 }
