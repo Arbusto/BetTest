@@ -103,6 +103,8 @@ body {
 
         .star-icon {
             content:url('../img/star.png');
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
             width: 22px;
         }
 
@@ -511,6 +513,111 @@ body {
             position: relative;
             left: 6px;
             transform: rotate(90deg);
+        }
+    }
+}
+
+.media-wrapper {
+    height: 100px;
+    background: #13a6dc;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+
+    .logo {
+        background-image: url('../img/logo-2.png');
+        background-repeat: no-repeat;
+        display: block;
+        width: 145px;
+        height: 55px;
+        margin-left: 20%;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+    }
+
+    .back-to-top {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: black;
+        color: #13a6dc;
+        padding: 7px 49px 3px;
+        font-size: 14px;
+        height: 25px;
+        width: 227px;
+
+        &:after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0px 0px 19px;
+            border-color: transparent transparent transparent #1180a9;
+            top: 1px;
+            left: 178px;
+            content: "";
+            position: relative;
+        }
+
+        &:before {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            width: 0;
+            border-width: 0 0 25px 20px;
+            border-color: transparent transparent #1180a9;
+            left: -69px;
+            top: -23px;
+            content: "";
+            position: relative;
+        }
+
+        .back-to-top-text:after {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7.5px 13.0px 7.5px;
+            border-color: transparent transparent #13a6dc transparent;
+            content: "";
+            position: relative;
+            top: -15px;
+            left: 11px;
+        }
+    }
+
+    .media-logos-wrapper {
+        display: flex;
+        height: 10px;
+        width: 32%;
+
+        .media-logo {
+            background-repeat: no-repeat;
+            -webkit-filter: grayscale(100%) brightness(0) invert(1);
+            filter: grayscale(100%);
+        }
+
+        .youtube {
+            content: url('../img/youtube.png');
+            widows: 55px;
+            height: 25px;
+        }
+        .facebook {
+            content: url('../img/facebook.png');
+            height: 26px;
+            width: 18px;
+            margin-left: 8px;
+        }
+        .twitter {
+            content: url('../img/twitter.png');
+            height: 25px;
+            margin-left: 8px;
+        }
+        .google-plus {
+            content: url('../img/google-plus.png');
+            width: 32px;
+            height: 27px;
+            margin-left: 9px;
         }
     }
 }
