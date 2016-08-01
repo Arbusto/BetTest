@@ -22,5 +22,6 @@
     "node-notifier": "^4.6.0"
   },
   "dependencies": {
+    "express": "^4.13.4"
   }
 }
