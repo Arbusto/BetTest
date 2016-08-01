@@ -7,6 +7,7 @@ $white: #ffffff;
 
 * {
     box-sizing:border-box;
+    font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     width: 100%;
     height: 130px;
     background-color: #3395d7;
-    box-shadow: -.3px 3px 10.2px .3px rgba(2,3,3,.5);
+    box-shadow: -0.3px 8px 10.2px .3px rgba(2,3,3,.5);
 
     .logo-wrapper{
         width: 34%;
@@ -143,15 +144,32 @@ body {
         top: 12px;
         right: 96px;
     }
-
 }
 
 
-main.wrapper .backgorund{
-    background: url('../img/main-background.png');
-    background-position: 0px -160px;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-    width: 100%;
-    height: 525px;
+.main-wrapper {
+    .background{
+        background: url(../img/main-background.png) bottom center;
+        background-position: 0px -131px;
+        background-repeat: no-repeat;
+        opacity: .6;
+        width: 113%;
+        height: 432px;
+        background-size: 90%;
+
+        .main-img-wrapper {
+            width: 54.3%;
+            height: 105%;
+            background-color: #fff;
+            box-shadow: -.7px 7.5px 12px 0 rgba(2,3,3,.39);
+            position: relative;
+            left: 18%;
+            overflow: hidden;
+
+            .main-img {
+                content: url('../img/main-img.png');
+                width: 115%;
+            }
+        }
+    }
 }
