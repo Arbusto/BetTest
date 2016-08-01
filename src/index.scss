@@ -384,7 +384,7 @@ body {
     align-items: center;
 
     .step {
-        width: 75px;
+        width: 85px;
         background: #f5d453;
         height: 82px;
         font-size: 70px;
@@ -407,6 +407,73 @@ body {
 
         .description {
             font-size: 14px;
+        }
+    }
+}
+
+.table {
+    height: 235px;
+    background-color: #24a95c;
+    display: flex;
+    justify-content: center;
+
+    .table-wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25px;
+
+        .row {
+            width: 100%;
+            border-bottom: 2px solid #135e33;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .date {
+                width: 14%;
+                display: inline-block;
+                text-align: center;
+                font-size: 15px;
+                color: #fff;
+                height: 100%;
+            }
+
+            .team {
+                width: 25%;
+                display: inline-block;
+                color: #fff;
+                height: 100%;
+                vertical-align: super;
+            }
+
+            .bets {
+                color: #fff;
+                letter-spacing: 3px;
+                height: 100%;
+                vertical-align: super;
+            }
+
+            .pay {
+                color: #fff;
+                width: 10%;
+                display: inline-block;
+                height: 100%;
+                vertical-align: super;
+            }
+            .number {
+                height: 100%;
+                vertical-align: super;
+                color: #fff;
+            }
+
+            .arrow {
+                content: url('../img/arrow.png');
+                -webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
