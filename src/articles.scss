@@ -1,0 +1,84 @@
+.osvaldo {
+    content: url('../img/osvaldo.png')
+}
+
+.yepes {
+    content: url('../img/yepes.png')
+}
+
+.chicharito {
+    content: url('../img/chicharito.png')
+}
+
+.khedira {
+    content: url('../img/khedira.png')
+}
+
+.paredes {
+    content: url('../img/paredes.png')
+}
+
+.medel {
+    content: url('../img/medel.png')
+}
+
+.capdevilla {
+    content: url('../img/capdevilla.png')
+}
+
+.nadal {
+    content: url('../img/nadal.png')
+}
+
+.hewitt {
+    content: url('../img/hewitt.png')
+}
+
+.news-articles-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 20px;
+
+    .article{
+        width: 25%;
+        margin: 10px;
+
+        .title {
+            height: 35px;
+            font-weight: bold;
+        }
+
+        .date {
+            font-size: 12px;
+            font-family: sans-serif;
+            color: #9f9b98;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .img-wrapper {
+            height: 175px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 1px 2px 5px #888888;
+        }
+
+        .category {
+            color: #fff;
+            text-shadow: -1px 0 red,0 1px red,0 0 red,0 0 red;
+            background-color: #14a6dd;
+            padding: 5px 9px;
+            display: inline-block;
+            position: relative;
+            font-size: 15px;
+            top: -165px;
+            left: -10px;
+            box-shadow: -2px 1px 1px #888888;
+        }
+    }
+
+}
