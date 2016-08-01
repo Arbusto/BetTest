@@ -1,0 +1,67 @@
+.search-box {
+    margin-bottom: 26px;
+}
+
+.search-icon {
+    content:url('../img/m-glass.png');
+}
+
+.input-wrapper {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+
+    .pre-icon{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 11px;
+        right: 7px;
+    }
+
+    input {
+        font-size:13px;
+        padding:10px 10px 10px 5px;
+        display:block;
+        background: none;
+        width: 140px;
+        height: 30px;
+        border:none;
+        border-bottom:1px solid #ffffff;
+        color: #ffffff;
+        text-shadow: 0px 0px 0px #ffffff;
+        -webkit-text-fill-color: transparent;
+        z-index: 9;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:focus + label {
+            visibility:hidden;
+        }
+
+        &:valid + label {
+            visibility:hidden;
+        }
+    }
+
+    input-place-holder {
+        color: #ffffff;
+    }
+
+
+    label {
+        position: relative;
+        font-family: 'Open Sans',sans-serif;
+        font-style: italic;
+        letter-spacing: 4.7px;
+        font-size: 8px;
+        color: #fff;
+        left: -121px;
+        top: 13px;
+        transition: .2s ease all;
+        -moz-transition: .2s ease all;
+        -webkit-transition: .2s ease all;
+    }
+}
